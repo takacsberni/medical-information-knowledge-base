@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class RiskFactors {
+public class Symptom {
     private String name;
     private String description;
 }
