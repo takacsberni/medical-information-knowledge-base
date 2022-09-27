@@ -30,4 +30,9 @@ public class DiseaseController {
     public void removeDisease(@PathVariable String disease){
         diseaseService.removeDisease(disease);
     }
+
+    @GetMapping(value = "api/disease/get/{disease}")
+    public Disease getDiseaseByName(@PathVariable String disease){
+        return diseaseService.getDiseaseByName(disease);
+    }
 }

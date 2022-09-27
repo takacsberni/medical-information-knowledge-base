@@ -23,4 +23,8 @@ public class DiseaseService {
     public void removeDisease(String disease) {
         diseaseStorageRepository.delete(diseaseStorageRepository.findByName(disease));
     }
+
+    public Disease getDiseaseByName(String disease) {
+        return diseaseStorageRepository.findByName(disease);
+    }
 }
