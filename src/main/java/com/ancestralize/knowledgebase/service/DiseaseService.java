@@ -27,4 +27,13 @@ public class DiseaseService {
     public Disease getDiseaseByName(String disease) {
         return diseaseStorageRepository.findByName(disease);
     }
+
+    public Disease updateDiseaseByName(String diseaseName, Disease newDisease) {
+        if (getDiseaseByName(diseaseName) != null){
+            removeDisease(diseaseName);
+            newDisease.setName(diseaseName);
+            diseaseStorageRepository.save(newDisease);
+        }
+        return newDisease;
+    }
 }

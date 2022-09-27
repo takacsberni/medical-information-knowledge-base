@@ -35,4 +35,9 @@ public class DiseaseController {
     public Disease getDiseaseByName(@PathVariable String diseaseName){
         return diseaseService.getDiseaseByName(diseaseName);
     }
+
+    @PutMapping(value = "api/disease/update/{diseaseName}")
+    public void updateDisease(@PathVariable String diseaseName, @RequestBody Disease newDisease){
+        diseaseService.updateDiseaseByName(diseaseName, newDisease);
+    }
 }
