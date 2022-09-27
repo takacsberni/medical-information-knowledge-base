@@ -21,7 +21,8 @@ public class Disease {
     private String name;
     private String description;
 
-//    private Set<RiskFactors> riskFactors;
-//
-//    private Set<Symptoms> symptoms;
+    @ManyToMany
+    private Set<RiskFactor> riskFactors;
+    @ManyToMany
+    private Set<Symptom> symptoms;
 }
