@@ -1,24 +1,12 @@
 package com.ancestralize.knowledgebase.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+public enum Symptom {
+    BONE_FRACTURES("A medical condition in which there is a partial or complete break in the continuity of a bone."),
+    HEIGHT_LOSS("Height loss is related to aging changes in bone, muscles, and joints"),
+    POSTURE_CHANGE("Height is lost in all men and women as they age. When poor posture leads to disc compression, the vertebrae in our back absorbs more force than it should. This can lead to chronic pain.");
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.UUID;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@Entity
-public class Symptom {
-    @Id
-    @GeneratedValue
-    private UUID id;
-    private String name;
     private String description;
+
+    Symptom(String description) {
+    }
 }

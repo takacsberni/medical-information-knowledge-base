@@ -15,4 +15,8 @@ public class DiseaseService {
     public List<Disease> getAllDisease(){
         return diseaseStorageRepository.findAll();
     }
+
+    public void addDisease(Disease newDisease){
+        diseaseStorageRepository.save(newDisease);
+    }
 }

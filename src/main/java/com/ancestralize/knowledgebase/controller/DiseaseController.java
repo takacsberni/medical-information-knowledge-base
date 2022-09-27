@@ -4,9 +4,7 @@ import com.ancestralize.knowledgebase.dao.DiseaseStorageRepository;
 import com.ancestralize.knowledgebase.model.Disease;
 import com.ancestralize.knowledgebase.service.DiseaseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +19,10 @@ public class DiseaseController {
     @GetMapping(value = "api/disease/get/all")
     public List<Disease> getAllDiseases(){
         return diseaseService.getAllDisease();
+    }
+
+    @PostMapping(value = "api/disease/new")
+    public void addDisease(@RequestBody Disease newDisease){
+        diseaseService.addDisease(newDisease);
     }
 }

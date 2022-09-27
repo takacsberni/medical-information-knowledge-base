@@ -1,25 +1,13 @@
 package com.ancestralize.knowledgebase.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+public enum RiskFactor {
+    LACK_OF_EXERCISE("Physical inactivity is one important cause of most chronic diseases."),
+    LOW_PROTEIN_INTAKE("Protein deficiency is when your intake is unable to meet your body’s requirements."),
+    OLD_AGE("Old age refers to ages nearing or surpassing the life expectancy");
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.UUID;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@Entity
-public class RiskFactor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
-    private String name;
     private String description;
+
+    RiskFactor(String description) {
+    }
 }

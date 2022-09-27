@@ -21,8 +21,10 @@ public class Disease {
     private String name;
     private String description;
 
-    @ManyToMany
+    @Enumerated(EnumType.STRING)
+    @ElementCollection(targetClass = RiskFactor.class)
     private Set<RiskFactor> riskFactors;
-    @ManyToMany
+    @Enumerated(EnumType.STRING)
+    @ElementCollection(targetClass = Symptom.class)
     private Set<Symptom> symptoms;
 }
