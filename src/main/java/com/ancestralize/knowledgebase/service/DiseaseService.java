@@ -19,4 +19,8 @@ public class DiseaseService {
     public void addDisease(Disease newDisease){
         diseaseStorageRepository.save(newDisease);
     }
+
+    public void removeDisease(String disease) {
+        diseaseStorageRepository.delete(diseaseStorageRepository.findByName(disease));
+    }
 }

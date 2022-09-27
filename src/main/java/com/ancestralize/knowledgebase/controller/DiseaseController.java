@@ -25,4 +25,9 @@ public class DiseaseController {
     public void addDisease(@RequestBody Disease newDisease){
         diseaseService.addDisease(newDisease);
     }
+
+    @DeleteMapping(value = "api/disease/delete/{disease}")
+    public void removeDisease(@PathVariable String disease){
+        diseaseService.removeDisease(disease);
+    }
 }
