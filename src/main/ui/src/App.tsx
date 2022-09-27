@@ -4,7 +4,9 @@ import './App.css';
 const App: FC = () => {
   return (
     <div className="App">
-hello
+        <div className="flex-container">
+            <div></div>
+        </div>
     </div>
   );
 }
