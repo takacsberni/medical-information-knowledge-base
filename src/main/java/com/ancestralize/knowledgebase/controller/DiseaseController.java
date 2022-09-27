@@ -26,13 +26,13 @@ public class DiseaseController {
         diseaseService.addDisease(newDisease);
     }
 
-    @DeleteMapping(value = "api/disease/delete/{disease}")
-    public void removeDisease(@PathVariable String disease){
-        diseaseService.removeDisease(disease);
+    @DeleteMapping(value = "api/disease/delete/{diseaseName}")
+    public void removeDisease(@PathVariable String diseaseName){
+        diseaseService.removeDisease(diseaseName);
     }
 
-    @GetMapping(value = "api/disease/get/{disease}")
-    public Disease getDiseaseByName(@PathVariable String disease){
-        return diseaseService.getDiseaseByName(disease);
+    @GetMapping(value = "api/disease/get/{diseaseName}")
+    public Disease getDiseaseByName(@PathVariable String diseaseName){
+        return diseaseService.getDiseaseByName(diseaseName);
     }
 }
