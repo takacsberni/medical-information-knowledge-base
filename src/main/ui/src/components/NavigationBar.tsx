@@ -1,10 +1,10 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
 import {Button, Form} from "react-bootstrap";
 import '../static/css/navigaton-bar.css'
+import {Link} from "react-router-dom";
 
 const NavigationBar: React.FC = () => {
     return (
@@ -20,27 +20,27 @@ const NavigationBar: React.FC = () => {
                             <NavDropdown.Item href="#action/3.3">Update disease</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Delete disease</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
+                            <NavDropdown.Item>
+                                <Link to="/diseases/all" className="dropdown-item">Browse diseases</Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Risk factors" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Find risk factor</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Add risk factor</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Update risk factor</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Delete risk factor</NavDropdown.Item>
+                            <NavDropdown.Item>Find risk factor</NavDropdown.Item>
+                            <NavDropdown.Item>Add risk factor</NavDropdown.Item>
+                            <NavDropdown.Item>Update risk factor</NavDropdown.Item>
+                            <NavDropdown.Item>Delete risk factor</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item >
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Symptoms" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Find symptom</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Add symptom</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Update symptom</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Delete symptom</NavDropdown.Item>
+                            <NavDropdown.Item>Find symptom</NavDropdown.Item>
+                            <NavDropdown.Item>Add symptom</NavDropdown.Item>
+                            <NavDropdown.Item>Update symptom</NavDropdown.Item>
+                            <NavDropdown.Item>Delete symptom</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
+                            <NavDropdown.Item >
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
