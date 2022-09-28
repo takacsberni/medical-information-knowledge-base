@@ -11,7 +11,7 @@
   --gray-color:#464748;
 }
 
-.flex-container{
+.flex-container-home{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
