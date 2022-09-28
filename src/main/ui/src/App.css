@@ -16,3 +16,22 @@
   flex-wrap: wrap;
   text-align: center;
 }
+.navbar {
+  display: flex;
+  padding: 10px;
+  flex: 1%;
+  max-height: 9%;
+}
+
+.inside {
+  background-color: var(--orange-color);
+  /*padding: 10px;*/
+  flex: 88%;
+}
+
+.footer {
+  padding: 10px;
+  flex: 10%;
+  max-height: 10%;
+
+}
