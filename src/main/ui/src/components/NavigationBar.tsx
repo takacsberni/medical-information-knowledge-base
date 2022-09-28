@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, MouseEvent} from "react";
 import Container from 'react-bootstrap/Container';
 import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
@@ -7,6 +7,14 @@ import '../static/css/navigaton-bar.css'
 import {Link} from "react-router-dom";
 
 const NavigationBar: React.FC = () => {
+
+    const [showMenuDisease, setShowMenuDisease] = useState(false);
+    const showDropdown = (e: MouseEvent):void => {
+        setShowMenuDisease(!showMenuDisease);
+    }
+    const hideDropDown = (e: MouseEvent<HTMLButtonElement>) => {
+        setShowMenuDisease(false);
+    }
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -14,11 +22,11 @@ const NavigationBar: React.FC = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto" variant="pills">
-                        <NavDropdown title="Disease" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Find disease</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Add disease</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Update disease</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Delete disease</NavDropdown.Item>
+                        <NavDropdown title="Disease" id="basic-nav-dropdown" onMouseEnter={showDropdown} onMouseLeave={hideDropDown} show={showMenuDisease}>
+                            <NavDropdown.Item>Find disease</NavDropdown.Item>
+                            <NavDropdown.Item>Add disease</NavDropdown.Item>
+                            <NavDropdown.Item>Update disease</NavDropdown.Item>
+                            <NavDropdown.Item>Delete disease</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item>
                                 <Link to="/diseases/all" className="dropdown-item">Browse diseases</Link>
