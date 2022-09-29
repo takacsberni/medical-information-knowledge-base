@@ -6,10 +6,6 @@ const Home: React.FC = () => {
     return (
         <div>
             <div className="flex-container-inside background-image" style={{ backgroundImage: `url(${Background})` }}>
-                <div className="card-inside">
-
-                </div>
-
             </div>
         </div>
     )
