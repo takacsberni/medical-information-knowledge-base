@@ -6,13 +6,15 @@ import Footer from "./components/Footer";
 
 const App: FC = () => {
   return (
-    <div className="App">
+      <body>
         <div className="flex-container-home">
             <div className="navbar"> <NavigationBar /> </div>
-            <div className="inside"> <Outlet /></div>
+            <div className="middle-container">
+                <div className="inside"> <Outlet /></div>
+            </div>
             <div className="footer"> <Footer /></div>
         </div>
-    </div>
+      </body>
   );
 }
 

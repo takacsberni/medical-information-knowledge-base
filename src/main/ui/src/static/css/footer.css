@@ -39,6 +39,6 @@
     font-size: 3em;
 }
 
-footer {
-    /*background-color: pink;*/
+a {
+    color: black !important;
 }

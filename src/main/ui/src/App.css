@@ -7,30 +7,50 @@
   --orange-color:#ff8200;
   --sand-color:#fda738;
   --brown-color:#7e0901;
-  --browsn2-color:#654132;
+  --brown2-color:#654132;
   --gray-color:#464748;
 }
-
-.flex-container-home{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
 }
+
+.flex-container-home {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 58rem;
+}
+
+.middle-container {
+    display: flex;
+}
+
 .navbar {
-  display: flex;
-  padding: 10px;
-  flex: 100%;
-  max-height: 9%;
+    display: flex;
+    padding: 10px;
+    flex: 1%;
+    max-height: 9%;
 }
 
 .inside {
-  background-color: var(--orange-color);
-  flex: 100%;
-  height: 51rem;
+    /*background-color: var(--brown-color);*/
+    background: linear-gradient(110deg, var(--sand-color) 60%, var(--orange-color) 60%);
+
+    padding: 0px;
+    flex: 88%;
 }
 
 .footer {
-  padding: 1rem;
-  flex: 100%;
-  max-height: 23%;
+    padding: 10px;
+    flex: 10%;
+    max-height: 10%;
+
 }
+
+
