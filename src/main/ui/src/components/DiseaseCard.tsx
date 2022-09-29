@@ -1,4 +1,6 @@
 import React from "react";
+import '../static/css/diseasecard.css';
+import {Link} from "react-router-dom";
 
 type Props = {
     name: string;
@@ -12,33 +14,15 @@ const DiseaseCard: React.FC<Props> = ({
                                           riskFactors,
                                           symptoms,
                                        }) => (
-    <div>
-        <p className="number">
-            Disease:
-        </p>
-        <p dangerouslySetInnerHTML={ {__html: name }} />
-        <p dangerouslySetInnerHTML={ {__html: description }} />
-        <div>
-            <div>Risk factors:</div>
-            {riskFactors.map(riskFactor => (
-                <div key={riskFactor}>
-                    <span dangerouslySetInnerHTML={
-                        {__html: `- ${riskFactor.replaceAll("_", " ").toLowerCase()}`
-                        }} />
-                </div>
-            ))}
-        </div>
-        <div>
-            <div>Symptoms: </div>
-            {symptoms.map(symptom => (
-                <div key={symptom}>
-                    <span dangerouslySetInnerHTML={
-                        {__html: `- ${symptom.replaceAll("_", " ").toLowerCase()}`
-                        }} />
-                </div>
-            ))}
-        </div>
+    <div className="card">
+        <Link to={`/diseases/ ${name}`} > <div className="card-body">
+             <h2 className="card-title">{name}</h2>
+                <p className="card-text">{description}</p>
+        </div></Link>
     </div>
 )
+
+
+
 
 export default DiseaseCard;

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import DiseaseCard from "../components/DiseaseCard";
-
+import '../static/css/diseasecard.css';
 
 
 const AllDiseases: React.FC = () => {
@@ -38,8 +38,8 @@ const AllDiseases: React.FC = () => {
     }
 
     return (
-        <div>
-        {diseases ? <div className="cardContainer"> {showDiseaseCards(diseases)} </div> : null}
+        <div className="card-container">
+        {diseases ? <div className=""> {showDiseaseCards(diseases)} </div> : null}
         </div>
     )
 
