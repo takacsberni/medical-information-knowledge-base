@@ -19,10 +19,22 @@ const DiseaseCard: React.FC<Props> = ({
         <p dangerouslySetInnerHTML={ {__html: name }} />
         <p dangerouslySetInnerHTML={ {__html: description }} />
         <div>
+            <div>Risk factors:</div>
             {riskFactors.map(riskFactor => (
                 <div key={riskFactor}>
-                    <span dangerouslySetInnerHTML={ {__html: riskFactor}} />
-                    {/*<span dangerouslySetInnerHTML={ {__html: symptoms}} />*/}
+                    <span dangerouslySetInnerHTML={
+                        {__html: `- ${riskFactor.replaceAll("_", " ").toLowerCase()}`
+                        }} />
+                </div>
+            ))}
+        </div>
+        <div>
+            <div>Symptoms: </div>
+            {symptoms.map(symptom => (
+                <div key={symptom}>
+                    <span dangerouslySetInnerHTML={
+                        {__html: `- ${symptom.replaceAll("_", " ").toLowerCase()}`
+                        }} />
                 </div>
             ))}
         </div>
