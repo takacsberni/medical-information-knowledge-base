@@ -16,7 +16,6 @@ const AllDiseases: React.FC = () => {
     }, [filter, statusFilter]);
 
     const showDiseaseCards = function (data: any[]) {
-        console.log(data)
         return data.map(item => (
             <DiseaseCard
                 name={item.name}
@@ -40,7 +39,6 @@ const AllDiseases: React.FC = () => {
 
     return (
         <div>
-            <p>ALlDiseases component</p>
         {diseases ? <div className="cardContainer"> {showDiseaseCards(diseases)} </div> : null}
         </div>
     )
