@@ -32,7 +32,7 @@ const NavigationBar: React.FC = () => {
                             <NavDropdown.Item>Delete risk factor</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item >
-                                Separated link
+                                Browse risk factors
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Symptoms" id="basic-nav-dropdown" renderMenuOnMount={true}>
@@ -42,11 +42,9 @@ const NavigationBar: React.FC = () => {
                             <NavDropdown.Item>Delete symptom</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item >
-                                Separated link
+                                Browse symptoms
                             </NavDropdown.Item>
                         </NavDropdown>
-                        {/*<Nav.Link href="#home">Home</Nav.Link>*/}
-                        {/*<Nav.Link href="#link">Link</Nav.Link>*/}
                     </Nav>
 
                     <Form className="d-flex">
