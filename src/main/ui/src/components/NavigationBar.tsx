@@ -1,4 +1,4 @@
-import React, {useState, MouseEvent} from "react";
+import React from "react";
 import Container from 'react-bootstrap/Container';
 import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
@@ -8,13 +8,6 @@ import {Link} from "react-router-dom";
 
 const NavigationBar: React.FC = () => {
 
-    const [showMenuDisease, setShowMenuDisease] = useState(false);
-    const showDropdown = (e: MouseEvent):void => {
-        setShowMenuDisease(!showMenuDisease);
-    }
-    const hideDropDown = (e: MouseEvent<HTMLButtonElement>) => {
-        setShowMenuDisease(false);
-    }
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -22,7 +15,7 @@ const NavigationBar: React.FC = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto" variant="pills">
-                        <NavDropdown title="Disease" id="basic-nav-dropdown" onMouseEnter={showDropdown} onMouseLeave={hideDropDown} show={showMenuDisease}>
+                        <NavDropdown title="Disease" id="basic-nav-dropdown" renderMenuOnMount={true}>
                             <NavDropdown.Item>Find disease</NavDropdown.Item>
                             <NavDropdown.Item>Add disease</NavDropdown.Item>
                             <NavDropdown.Item>Update disease</NavDropdown.Item>
@@ -32,7 +25,7 @@ const NavigationBar: React.FC = () => {
                                 <Link to="/diseases/all" className="dropdown-item">Browse diseases</Link>
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Risk factors" id="basic-nav-dropdown">
+                        <NavDropdown title="Risk factors" id="basic-nav-dropdown" renderMenuOnMount={true}>
                             <NavDropdown.Item>Find risk factor</NavDropdown.Item>
                             <NavDropdown.Item>Add risk factor</NavDropdown.Item>
                             <NavDropdown.Item>Update risk factor</NavDropdown.Item>
@@ -42,7 +35,7 @@ const NavigationBar: React.FC = () => {
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Symptoms" id="basic-nav-dropdown">
+                        <NavDropdown title="Symptoms" id="basic-nav-dropdown" renderMenuOnMount={true}>
                             <NavDropdown.Item>Find symptom</NavDropdown.Item>
                             <NavDropdown.Item>Add symptom</NavDropdown.Item>
                             <NavDropdown.Item>Update symptom</NavDropdown.Item>

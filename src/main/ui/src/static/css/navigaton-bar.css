@@ -1,4 +1,4 @@
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+.nav-link:hover {
     background-color: var(--sand-color) !important;
 }
 
@@ -9,3 +9,8 @@
     letter-spacing: .13em !important;
     font-size: 1.5rem !important;
 }
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
