@@ -38,12 +38,14 @@
     max-height: 9%;
 }
 
-.inside {
-    /*background-color: var(--brown-color);*/
-    background: linear-gradient(110deg, var(--sand-color) 60%, var(--orange-color) 60%);
-
-    padding: 0px;
+.inside{
     flex: 88%;
+    background: var(--sand-color);
+}
+
+.inside-dark{
+    flex: 88%;
+    background:lightslategray;
 }
 
 .footer {

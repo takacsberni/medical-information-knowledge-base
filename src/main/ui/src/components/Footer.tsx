@@ -1,7 +1,11 @@
 import React from "react";
 import '../static/css/footer.css';
 
-const Footer: React.FC = () => {
+interface Props {
+    changeTheme():void;
+}
+
+const Footer = ({changeTheme}:Props) => {
     return (
         <footer>
             <div className="flex-container-footer">
@@ -11,8 +15,8 @@ const Footer: React.FC = () => {
                 <div className="footer-col-2">
                     <h5 className="middle"> <a href="https://www.ancestralize.com/"> Ancestralize home </a> </h5>
                 </div>
-                <div className="footer-col-3">
-                    <h5 className="middle"> 2022 </h5>
+                <div className="footer-col-3" onClick={() => {changeTheme()}}>
+                    <h5 className="middle"> Color </h5>
                 </div>
             </div>
         </footer>
