@@ -9,7 +9,8 @@ public enum RiskFactor {
     REPEATEDLY_USE_A_MUSCLE(""),
     OVERWEIGHT(""),
     GENETIC_MARKER("When you have the genetic marker that makes you susceptible to something"),
-    TICK_BITE("");
+    TICK_BITE(""),
+    PREDIABETES("Prediabetes is a condition in which your blood sugar level is higher than normal, but not high enough to be classified as diabetes.");
 
 
 

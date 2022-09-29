@@ -12,7 +12,8 @@ public enum Symptom {
     CIRCULAR_RASH_AROUND_THE_BITE(""),
     MUSCLE_PAIN(""),
     HEADACHES(""),
-    FEVER("");
+    FEVER(""),
+    BLURRED_VISION("");
 
 
     private String description;
