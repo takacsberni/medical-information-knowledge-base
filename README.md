@@ -1,6 +1,6 @@
 # Medical knowledge base management system
 ![alt text](https://github.com/takacsberni/medical-information-knowledge-base/blob/master/home-screenshot.png?raw=true)
-![alt text](https://github.com/takacsberni/medical-information-knowledge-base/blob/master/color_themes.png?raw=true)
+
 
 
 ### Built With
@@ -37,7 +37,7 @@ The backend use the port 8080: http://localhost:8080/
 https://tinyurl.com/29yw59pf
 
 
-
+![alt text](https://github.com/takacsberni/medical-information-knowledge-base/blob/master/color_themes.png?raw=true)
 
 ## Contact
 
