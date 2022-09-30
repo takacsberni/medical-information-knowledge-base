@@ -15,6 +15,8 @@
 ### You can clone the project:
 git clone https://github.com/takacsberni/medical-information-knowledge-base.git
 
+![alt text](https://github.com/takacsberni/medical-information-knowledge-base/blob/master/color_themes.png?raw=true)
+
 ### Prerequisites
 - PSQL: a database for the project was made with Postgresql. To use it, it is needed to fill out 'application.properties' file with your own data for PSQL
 - NPM: run npm install
