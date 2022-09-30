@@ -1,5 +1,5 @@
-# Medical knowledge-base management system
-![alt text](medical-information-knowledge-base/blob/master/.png?raw=true)
+# Medical knowledge base management system
+![alt text](https://github.com/takacsberni/medical-information-knowledge-base/blob/master/home-screenshot.png?raw=true)
 
 
 
