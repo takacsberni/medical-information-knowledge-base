@@ -18,18 +18,16 @@ git clone https://github.com/takacsberni/medical-information-knowledge-base.git
 
 
 ### Prerequisites
-- PSQL: a database for the project was made with Postgresql. To use it, it is needed to fill out 'application.properties' file with your own data for PSQL
+- PSQL: a database for the project was made with Postgresql. To be able to use the database, you have to give your PSQL username, password in the file 'application.properties'
 - NPM: run npm install
 - Postman - if you want to test backend services, which were not implemented in the frontend (like editing a disease)
-
-- For the frontend you can run `npm start', and open http://localhost:3000 to view it in your browser.
 
 ### Installation
 
 
 ## Usage
 - Frontend: 
-You can reach the frontend via port 3000: http://localhost:3000/
+You can run `npm start', and open http://localhost:3000 to view it in your browser.
 - Backend: 
 The backend use the port 8080: http://localhost:8080/
 
