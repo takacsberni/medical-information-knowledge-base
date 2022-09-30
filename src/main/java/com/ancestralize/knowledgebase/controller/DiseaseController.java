@@ -14,7 +14,6 @@ public class DiseaseController {
 
     @Autowired
     private DiseaseService diseaseService;
-    private DiseaseStorageRepository diseaseStorageRepository;
 
     @GetMapping(value = "api/disease/get/all")
     public List<Disease> getAllDiseases(){
