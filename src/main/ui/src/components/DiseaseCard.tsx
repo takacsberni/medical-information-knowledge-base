@@ -15,7 +15,7 @@ const DiseaseCard: React.FC<Props> = ({
                                           symptoms,
                                        }) => (
     <div className="card">
-        <Link to={`/diseases/ ${name}`} > <div className="card-body">
+        <Link to={`/diseases/get/${name}`} > <div className="card-body">
              <h2 className="card-title">{name}</h2>
                 <p className="card-text">{description}</p>
         </div></Link>
