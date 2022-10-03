@@ -14,3 +14,6 @@
     display: block;
 }
 
+.nav-item.dropdown .dropdown-item:active {
+    background-color: #ff8200 !important;
+}
