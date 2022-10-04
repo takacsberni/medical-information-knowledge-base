@@ -1,5 +1,5 @@
 import React from "react";
-import '../static/css/all-disease-card.css';
+import '../static/css/all-disease-cards.css';
 import {Link} from "react-router-dom";
 
 type Props = {

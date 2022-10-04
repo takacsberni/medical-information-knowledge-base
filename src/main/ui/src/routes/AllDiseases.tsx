@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import DiseaseCard from "../components/DiseaseCard";
-import '../static/css/all-disease-card.css';
+import '../static/css/all-disease-cards.css';
 
 
 const AllDiseases: React.FC = () => {
