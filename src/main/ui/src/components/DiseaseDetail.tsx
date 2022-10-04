@@ -1,5 +1,4 @@
 import React from "react";
-import '../static/css/disease-card.css';
 interface DiseaseType  {
     name: string;
     description: string;
@@ -10,7 +9,7 @@ interface DiseaseType  {
 const DiseaseDetail = ({name, description, symptoms, riskFactors}: DiseaseType) => {
     return (
         <div className="card-container" style={{height:"50rem"}}>
-            <div className="card" id="disease-card">
+            <div className="card" style={{height: "max-content"}}>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p className="card-text">{description}</p>
