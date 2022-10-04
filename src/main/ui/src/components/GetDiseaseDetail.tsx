@@ -6,9 +6,11 @@ import DiseaseDetail from "./DiseaseDetail";
 
 const GetDiseaseDetail: React.FC = () => {
     // const [disease, setDisease] = useState([]);
-    const [disease, setDisease] = useState<{name: string; description: string}>({
+    const [disease, setDisease] = useState<{name: string; description: string, riskFactors: string[], symptoms: string[]}>({
         name: '',
         description: '',
+        riskFactors: [],
+        symptoms: [],
     });
     let {filter} = useParams();
 
@@ -22,7 +24,7 @@ const GetDiseaseDetail: React.FC = () => {
         }
     }
 
-    const showDiseaseDetails = function (data: {name: string; description: string}) {
+    const showDiseaseDetails = function (data: {name: string; description: string; symptoms: string[]; riskFactors: string[];}) {
         return  (
             <DiseaseDetail{...data} />
         )
@@ -30,7 +32,7 @@ const GetDiseaseDetail: React.FC = () => {
 
     useEffect(() => {
         fetchDisease(filter).then((disease) => {
-            setDisease({name: disease.name, description: disease.description});
+            setDisease({riskFactors: disease.riskFactors, symptoms: disease.symptoms, name: disease.name, description: disease.description});
             console.log(disease)
         })
     }, [filter]);
